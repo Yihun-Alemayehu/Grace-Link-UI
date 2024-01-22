@@ -17,7 +17,7 @@ class PostCard extends StatelessWidget {
               children: [
                 // profile
                 CircleAvatar(
-                  backgroundImage: AssetImage('assets/copy.jpg'),
+                  backgroundImage: AssetImage('assets/dad.jpg'),
                 ),
                 SizedBox(
                   width: 10,
@@ -64,14 +64,22 @@ class PostCard extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(12.0),
+                  padding: const EdgeInsets.only(
+                    top: 12,
+                    bottom: 12,
+                    right: 12,
+                  ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Image.asset('assets/heart.png'),
+                      Text('1.2 K'),
                       Image.asset('assets/comment.png'),
+                      Text('120'),
                       Image.asset('assets/share.png'),
+                      Text('120'),
                       Image.asset('assets/repost.png'),
+                      Text('120'),
                     ],
                   ),
                 ),
@@ -79,7 +87,9 @@ class PostCard extends StatelessWidget {
                   padding: EdgeInsets.all(12),
                   child: Row(
                     children: [
-                      CircleAvatar(),
+                      CircleAvatar(
+                        backgroundImage: AssetImage('assets/copy.jpg'),
+                      ),
                       const SizedBox(
                         width: 10,
                       ),
