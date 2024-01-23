@@ -11,20 +11,25 @@ class PostCard extends StatelessWidget {
       color: Colors.white,
       child: Column(
         children: [
-          const Padding(
-            padding: EdgeInsets.all(8.0),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
             child: Row(
               children: [
                 // profile
-                CircleAvatar(
-                  backgroundImage: AssetImage('assets/dad.jpg'),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).pushNamed('/chat');
+                  },
+                  child: const CircleAvatar(
+                    backgroundImage: AssetImage('assets/dad.jpg'),
+                  ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
 
                 //name and date
-                Column(
+                const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text('Aychew Desalegn'),
@@ -32,10 +37,10 @@ class PostCard extends StatelessWidget {
                   ],
                 ),
 
-                Spacer(),
+                const Spacer(),
 
                 //more information
-                Icon(Icons.more_horiz),
+                const Icon(Icons.more_horiz),
               ],
             ),
           ),

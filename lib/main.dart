@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grace_link_ui/screens/chat_screen.dart';
 import 'package:grace_link_ui/screens/home_screen.dart';
 
 void main() {
@@ -10,9 +11,12 @@ class GraceLink extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return  MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      routes: {
+        '/': (context) =>  const HomeScreen(),
+        '/chat': (context) => const ChatScreen(),
+      }
     );
   }
 }
