@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grace_link_ui/screens/chat_room.dart';
 import 'package:grace_link_ui/screens/chat_screen.dart';
 import 'package:grace_link_ui/screens/home_screen.dart';
 
@@ -16,6 +17,7 @@ class GraceLink extends StatelessWidget {
       routes: {
         '/': (context) =>  const HomeScreen(),
         '/chat': (context) => const ChatScreen(),
+        '/chat-room': (context) => const ChatRoom(),
       }
     );
   }
